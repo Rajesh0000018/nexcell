@@ -1,1 +1,4 @@
-# Exact Python dependency versions will be added in Stage 3.
+fastapi==0.141.1
+uvicorn==0.53.0
+redis==8.1.0
+psycopg[binary]==3.3.6
