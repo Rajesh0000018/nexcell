@@ -53,6 +53,8 @@ services:
   migrate:
     <<: *app-image
     command: ["python", "-m", "app.migrate"]
+    healthcheck:
+      disable: true
     environment: *app-environment
     depends_on:
       postgres:
@@ -94,6 +96,8 @@ services:
   worker:
     <<: *app-image
     command: ["python", "-m", "app.worker"]
+    healthcheck:
+      disable: true
     environment: *app-environment
     depends_on:
       migrate:
